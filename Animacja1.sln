@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime3", "Anime3\Anime3.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime4", "Anime4\Anime4.csproj", "{A2430B68-5013-4065-8686-4A3E9C0E919B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime5", "Anime5\Anime5.csproj", "{AEE81838-9159-4F19-B633-6E65DA324E09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A2430B68-5013-4065-8686-4A3E9C0E919B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2430B68-5013-4065-8686-4A3E9C0E919B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2430B68-5013-4065-8686-4A3E9C0E919B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE81838-9159-4F19-B633-6E65DA324E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE81838-9159-4F19-B633-6E65DA324E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE81838-9159-4F19-B633-6E65DA324E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE81838-9159-4F19-B633-6E65DA324E09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

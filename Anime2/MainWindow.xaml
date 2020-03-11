@@ -10,8 +10,9 @@
 	<!--https://www.codeproject.com/Articles/1132610/WPF-Image-Buttons-100-in-XAML
 	https://stackoverflow.com/questions/41454131/automatic-animation-of-paths-vectors-with-xaml-wpf
 	https://www.codeproject.com/Tips/1089489/Vector-Icons-in-WPF
-	http://www.blackwasp.co.uk/WPFPathAnimation.aspx-->
-	
+	http://www.blackwasp.co.uk/WPFPathAnimation.aspx
+	https://www.google.com/search?q=wpf+Storyboard+visibility+control&oq=wpf+Storyboard+visibility+control&aqs=chrome..69i57.6385j0j9&sourceid=chrome&ie=UTF-8-->
+
 	<Window.Resources>
 		<!--<PathGeometry x:Key="Antenna0"
 					  Figures="m 111.8457,42.326172 c -14.239997,0 -25.826169,11.585219 -25.826169,25.824219 0,9.424 5.075766,17.681406 12.634766,22.191406 L 66.935547,223.68945 c
@@ -46,9 +47,19 @@
 				<!--<PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="path">
 					<EasingPointKeyFrame KeyTime="0:0:0.2" Value="35,25"/>
 				</PointAnimationUsingKeyFrames>-->
-				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="path">
+
+				<!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="path1">
 					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="10"/>
-				</DoubleAnimationUsingKeyFrames>
+				</DoubleAnimationUsingKeyFrames>-->
+
+				<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="path1" Duration="0:0:1.5">
+					<DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+				</ObjectAnimationUsingKeyFrames>
+
+				<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="path2" Duration="0:0:1.5">
+					<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+				</ObjectAnimationUsingKeyFrames>
+
 				<!--<PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="path1">
 					<EasingPointKeyFrame KeyTime="0:0:0.2" Value="34.9687517366199,8.02473365979495E-07"/>
 				</PointAnimationUsingKeyFrames>-->
@@ -83,7 +94,7 @@
 				</TransformGroup>
 			</Grid.RenderTransform>-->
 
-			<Path x:Name="path1" Fill="Black" Margin="0,0,0,25" Width="435" Height="425">
+			<Path x:Name="path0" Fill="Black" Margin="0" Width="435" Height="425" >
 				<Path.Data>
 					<PathGeometry 
 					  Figures="m 111.8457,42.326172 c -14.239997,0 -25.826169,11.585219 -25.826169,25.824219 0,9.424 5.075766,17.681406 12.634766,22.191406 L 66.935547,223.68945 c
@@ -97,7 +108,7 @@
 					</PathGeometry>-->
 				</Path.Data>
 			</Path>
-			<Path x:Name="path" Fill="Black" Height="425" Width="435" Margin="0,25,0,0">
+			<Path x:Name="path1" Fill="Black" Height="425" Width="435" Margin="0" Visibility="Hidden">
 				<Path.Data>
 					<PathGeometry
 					  Figures="m 61.080078,24.814453 c -11.575,11.576 -17.949219,26.965938 -17.949219,43.335938 0,16.37 6.373219,31.76189 17.949219,43.337889 L 75.222656,97.345703 c
@@ -106,6 +117,27 @@
 					  -6.37617,-31.761891 -17.95117,-43.337891 z M 111.8457,42.326172 c -14.239997,0 -25.826169,11.585219 -25.826169,25.824219 0,9.424 5.075766,17.681406 12.634766,22.191406 L
 					  66.935547,223.68945 c 30.215298,-1e-5 62.458083,0 89.818363,0 L 125.03516,90.341797 c 7.559,-4.511 12.63476,-12.767406 12.63476,-22.191406 0,-14.239 -11.58422,-25.824219
 					  -25.82422,-25.824219 z"/>
+					<!--<PathGeometry>
+						<PathFigure IsClosed="True" StartPoint="0,0">
+							<LineSegment Point="35.0000012644377,0"/>
+							<LineSegment Point="24.2397160835937,7.72147280089242"/>
+							<LineSegment Point="0,24.9999997857589"/>
+						</PathFigure>
+					</PathGeometry>-->
+				</Path.Data>
+			</Path>
+			<Path x:Name="path2" Fill="Black" Height="425" Width="435" Margin="0" Visibility="Hidden">
+				<Path.Data>
+					<PathGeometry
+					  Figures="M 36.267578 0 C 18.064578 18.204 8.0390625 42.406391 8.0390625 68.150391 C 8.0390625 93.895391 18.064578 118.09873 36.267578 136.30273 L 50.410156 122.16016 C 35.984156
+					  107.73416 28.039062 88.552391 28.039062 68.150391 C 28.039062 47.748391 35.983156 28.567578 50.410156 14.142578 L 36.267578 0 z M 187.42188 0 L 173.2793 14.142578 C 187.7053 28.568578
+					  195.65039 47.748391 195.65039 68.150391 C 195.65039 88.553391 187.7053 107.73416 173.2793 122.16016 L 187.42188 136.30273 C 205.62588 118.09873 215.65039 93.895391 215.65039 68.150391 C
+					  215.65039 42.406391 205.62487 18.204 187.42188 0 z M 61.080078 24.814453 C 49.505078 36.390453 43.130859 51.780391 43.130859 68.150391 C 43.130859 84.520391 49.504078 99.912282 61.080078
+					  111.48828 L 75.222656 97.345703 C 67.423656 89.547703 63.130859 79.178391 63.130859 68.150391 C 63.130859 57.122391 67.424656 46.754078 75.222656 38.955078 L 61.080078 24.814453 z M
+					  162.60742 24.814453 L 148.46484 38.957031 C 156.26284 46.755031 160.55859 57.122391 160.55859 68.150391 C 160.55859 79.178391 156.26284 89.547703 148.46484 97.345703 L 162.60742 111.48828
+					  C 174.18242 99.912282 180.55859 84.522344 180.55859 68.152344 C 180.55859 51.782344 174.18242 36.390453 162.60742 24.814453 z M 111.8457 42.326172 C 97.605706 42.326172 86.019531 53.911391
+					  86.019531 68.150391 C 86.019531 77.574391 91.095297 85.831797 98.654297 90.341797 L 66.935547 223.68945 L 156.75391 223.68945 L 125.03516 90.341797 C 132.59416 85.830797 137.66992 77.574391
+					  137.66992 68.150391 C 137.66992 53.911391 126.0857 42.326172 111.8457 42.326172 z"/>
 					<!--<PathGeometry>
 						<PathFigure IsClosed="True" StartPoint="0,0">
 							<LineSegment Point="35.0000012644377,0"/>
