@@ -7,6 +7,11 @@
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800">
 
+	<!--https://www.codeproject.com/Articles/1132610/WPF-Image-Buttons-100-in-XAML
+	https://stackoverflow.com/questions/41454131/automatic-animation-of-paths-vectors-with-xaml-wpf
+	https://www.codeproject.com/Tips/1089489/Vector-Icons-in-WPF
+	http://www.blackwasp.co.uk/WPFPathAnimation.aspx-->
+	
 	<Window.Resources>
 		<!--<PathGeometry x:Key="Antenna0"
 					  Figures="m 111.8457,42.326172 c -14.239997,0 -25.826169,11.585219 -25.826169,25.824219 0,9.424 5.075766,17.681406 12.634766,22.191406 L 66.935547,223.68945 c
