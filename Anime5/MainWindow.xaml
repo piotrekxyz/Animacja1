@@ -3,7 +3,6 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:local="clr-namespace:Anime5"
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800">
 
@@ -30,39 +29,40 @@
 	</Window.Resources>
 
 	<Grid>
-		<Canvas>
-			<Canvas.Resources>
-				<Storyboard x:Key="ShapeTransform" RepeatBehavior="Forever" Duration="0:0:1.5">
+		<!--<Canvas>-->
+		<Grid.Resources>
+			<Storyboard x:Key="ShapeTransform" RepeatBehavior="Forever" Duration="0:0:1.5">
 
-					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="antenna1" >
-						<DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
-					</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="antenna1" >
+					<DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+				</ObjectAnimationUsingKeyFrames>
 
-					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="antenna2" >
-						<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
-					</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="antenna2" >
+					<DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+				</ObjectAnimationUsingKeyFrames>
 
-				</Storyboard>
-			</Canvas.Resources>
+			</Storyboard>
+		</Grid.Resources>
 
-			<Canvas.Triggers>
-				<EventTrigger RoutedEvent="Grid.Loaded">
-					<BeginStoryboard Storyboard="{StaticResource ShapeTransform}"/>
-				</EventTrigger>
-			</Canvas.Triggers>
+		<Grid.Triggers>
+			<EventTrigger RoutedEvent="Grid.Loaded">
+				<BeginStoryboard Storyboard="{StaticResource ShapeTransform}"/>
+			</EventTrigger>
+		</Grid.Triggers>
 
-			<Canvas x:Name="canvas" HorizontalAlignment="Center" VerticalAlignment="Center" >
-				<Path x:Name="antenna0" Fill="Black" Margin="0" Width="435" Height="425" >
-					<Path.Data>
-						<PathGeometry 
-					  Figures="m 111.8457,42.326172 c -14.239997,0 -25.826169,11.585219 -25.826169,25.824219 0,9.424 5.075766,17.681406 12.634766,22.191406 L 66.935547,223.68945 c
-					  30.215298,-1e-5 62.458083,0 89.818363,0 L 125.03516,90.341797 c 7.559,-4.511 12.63476,-12.767406 12.63476,-22.191406 0,-14.239 -11.58422,-25.824219 -25.82422,-25.824219 z"/>
-					</Path.Data>
-				</Path>
-				<Path x:Name="antenna1" Fill="Black" Height="425" Width="435" Margin="0" Visibility="Hidden" Data="{StaticResource Antenna1}"/>
-				<Path x:Name="antenna2" Fill="Black" Height="425" Width="435" Margin="0" Visibility="Hidden" Data="{StaticResource Antenna2}"/>
-			</Canvas>
+		<Canvas x:Name="canvas" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100">
+			<Path x:Name="antenna0" Fill="Black"  Width="235" Height="225" >
+				<Path.Data>
+					<PathGeometry 
+					  Figures="m 111.8457,42.326172 c -14.239997,0 -25.826169,11.585219 -25.826169,25.824219 0,9.424 5.075766,17.681406 12.634766,22.191406 L
+						66.935547,223.68945 c 30.215298,-1e-5 62.458083,0 89.818363,0 L 125.03516,90.341797 c 7.559,-4.511 12.63476,-12.767406 12.63476,-22.191406
+						0,-14.239 -11.58422,-25.824219 -25.82422,-25.824219 z"/>
+				</Path.Data>
+			</Path>
+			<Path x:Name="antenna1" Fill="Black" Height="425" Width="435" Visibility="Hidden" Data="{StaticResource Antenna1}"/>
+			<Path x:Name="antenna2" Fill="Black" Height="425" Width="435" Visibility="Hidden" Data="{StaticResource Antenna2}"/>
 		</Canvas>
+		<!--</Canvas>-->
 
 	</Grid>
 </Window>

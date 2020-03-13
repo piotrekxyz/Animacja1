@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime4", "Anime4\Anime4.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime5", "Anime5\Anime5.csproj", "{AEE81838-9159-4F19-B633-6E65DA324E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szablony", "Szablony\Szablony.csproj", "{368FD5A1-2B79-428F-9772-49BF4E098992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kontrolka", "Kontrolka\Kontrolka.csproj", "{DA068D33-78BE-4738-87E8-C7B98F7AE085}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{AEE81838-9159-4F19-B633-6E65DA324E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE81838-9159-4F19-B633-6E65DA324E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE81838-9159-4F19-B633-6E65DA324E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368FD5A1-2B79-428F-9772-49BF4E098992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368FD5A1-2B79-428F-9772-49BF4E098992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368FD5A1-2B79-428F-9772-49BF4E098992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368FD5A1-2B79-428F-9772-49BF4E098992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA068D33-78BE-4738-87E8-C7B98F7AE085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA068D33-78BE-4738-87E8-C7B98F7AE085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA068D33-78BE-4738-87E8-C7B98F7AE085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA068D33-78BE-4738-87E8-C7B98F7AE085}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
